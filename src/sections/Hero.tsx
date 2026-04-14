@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, type FormEvent } from 'react';
-import { MapPin, Calendar, Users, ArrowRight, Loader2 } from 'lucide-react';
+import { MapPin, ArrowRight, Loader2 } from 'lucide-react';
 import type { BookingFormData } from '../App';
 
 interface HeroProps {

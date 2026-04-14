@@ -56,6 +56,11 @@ export function BookingResults({
     setTimeout(() => setLoading(false), 2000);
   }, []);
 
+  <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-8">
+  <span>{bookingData?.from} → {bookingData?.to}</span>
+  <span>{bookingData?.adults} Passenger(s)</span>
+</div>
+
   const toggleSeat = (seat: number) => {
     if (selectedSeats.includes(seat)) {
       setSelectedSeats(selectedSeats.filter(s => s !== seat));
