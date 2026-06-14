@@ -8,11 +8,7 @@ export default defineConfig({
   base: './',
   plugins: [inspectAttr(), react()],
   server: {
-<<<<<<< HEAD
     port: 5174,
-=======
-    port: 5173,
->>>>>>> 36b1c8de34196dcf27f65c3dda2813cca12f314c
     host: true,
     strictPort: true,
     allowedHosts: ['preformed-cuddle-exit.ngrok-free.dev']

@@ -72,7 +72,6 @@ module.exports = {
           "0%,70%,100%": { opacity: "1" },
           "20%,50%": { opacity: "0" },
         },
-<<<<<<< HEAD
         "slide-in-right": {
           from: { transform: "translateX(120%)", opacity: "0" },
           to:   { transform: "translateX(0)",    opacity: "1" },
@@ -85,19 +84,14 @@ module.exports = {
           from: { width: "100%" },
           to:   { width: "0%" },
         },
-=======
->>>>>>> 36b1c8de34196dcf27f65c3dda2813cca12f314c
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "caret-blink": "caret-blink 1.25s ease-out infinite",
-<<<<<<< HEAD
         "slide-in-right":  "slide-in-right 0.45s cubic-bezier(0.22,1,0.36,1) forwards",
         "slide-out-right": "slide-out-right 0.4s cubic-bezier(0.55,0,1,0.45) forwards",
         "drain": "drain 3.2s linear forwards",
-=======
->>>>>>> 36b1c8de34196dcf27f65c3dda2813cca12f314c
       },
     },
   },

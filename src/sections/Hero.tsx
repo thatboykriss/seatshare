@@ -247,11 +247,7 @@ export function Hero({ onBookingSubmit }: HeroProps) {
                   </div>
 
                   {/* DATE / ADULTS */}
-<<<<<<< HEAD
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-=======
-                  <div className="grid grid-cols-2 gap-4">
->>>>>>> 36b1c8de34196dcf27f65c3dda2813cca12f314c
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         Departure Date
@@ -261,11 +257,7 @@ export function Hero({ onBookingSubmit }: HeroProps) {
                         value={date}
                         min={new Date().toISOString().split('T')[0]}
                         onChange={(e) => setDate(e.target.value)}
-<<<<<<< HEAD
                         className="w-full px-3 py-3 border border-gray-200 rounded-lg text-sm bg-gray-50 focus:outline-none focus:border-[#b5894e] focus:ring-2 focus:ring-[#b5894e]/20"
-=======
-                        className="w-full p-3 border rounded-lg"
->>>>>>> 36b1c8de34196dcf27f65c3dda2813cca12f314c
                       />
                     </div>
 
@@ -276,11 +268,7 @@ export function Hero({ onBookingSubmit }: HeroProps) {
                       <select
                         value={adults}
                         onChange={(e) => setAdults(Number(e.target.value))}
-<<<<<<< HEAD
                         className="w-full px-3 py-3 border border-gray-200 rounded-lg text-sm bg-gray-50 focus:outline-none focus:border-[#b5894e] focus:ring-2 focus:ring-[#b5894e]/20 appearance-none"
-=======
-                        className="w-full p-3 border rounded-lg"
->>>>>>> 36b1c8de34196dcf27f65c3dda2813cca12f314c
                       >
                         {[1, 2, 3, 4, 5, 6].map((num) => (
                           <option key={num}>{num}</option>
