@@ -6,10 +6,16 @@ import { PopularRoutes } from './sections/PopularRoutes';
 import { HowItWorks } from './sections/HowItWorks';
 import { Testimonials } from './sections/Testimonials';
 import { CTASection } from './sections/CTASection';
+<<<<<<< HEAD
 import { TransportPartner } from './sections/TransportPartner';
 import { Footer } from './sections/Footer';
 import { BookingResults } from './sections/BookingResults';
 import { AuthPage, SuccessToast } from './sections/AuthPage';
+=======
+import { Footer } from './sections/Footer';
+import { BookingResults } from './sections/BookingResults';
+import { AuthPage } from './sections/AuthPage';
+>>>>>>> 36b1c8de34196dcf27f65c3dda2813cca12f314c
 
 export type BookingFormData = {
   from: string;
@@ -19,6 +25,7 @@ export type BookingFormData = {
   tripType: 'one-way' | 'round-trip';
 };
 
+<<<<<<< HEAD
 export type AppScreen =
   | 'home'
   | 'results'
@@ -36,12 +43,25 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
+=======
+function App() {
+  const [showResults, setShowResults] = useState(false);
+  const [showAuth, setShowAuth] = useState(false);
+  const [bookingData, setBookingData] = useState<BookingFormData | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+>>>>>>> 36b1c8de34196dcf27f65c3dda2813cca12f314c
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const handleBookingSubmit = (data: BookingFormData) => {
     setBookingData(data);
+<<<<<<< HEAD
     setScreen('results');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -129,6 +149,40 @@ function App() {
       {toast.show && (
         <SuccessToast name={toast.name} onDone={() => setToast({ show: false })} />
       )}
+=======
+    setShowResults(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleBackToHome = () => {
+    setShowResults(false);
+    setBookingData(null);
+  };
+
+  return (
+    <div className="min-h-screen bg-[#faf7f2]">
+      <Header scrolled={scrolled} onAuthClick={() => setShowAuth(true)} />
+      
+      {showAuth ? (
+  <AuthPage onBack={() => setShowAuth(false)} />
+) : showResults ? (
+  <BookingResults 
+    bookingData={bookingData} 
+    onBack={handleBackToHome}
+  />
+) : (
+  <main>
+    <Hero onBookingSubmit={handleBookingSubmit} />
+    <About />
+    <PopularRoutes onBookNow={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
+    <HowItWorks />
+    <Testimonials />
+    <CTASection />
+  </main>
+)}
+      
+      <Footer />
+>>>>>>> 36b1c8de34196dcf27f65c3dda2813cca12f314c
     </div>
   );
 }
